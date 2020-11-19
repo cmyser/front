@@ -17,7 +17,7 @@
     </div>
 </template>
 <script>
-    import axios from 'axios'
+    // import axios from 'axios'
 
     export default {
         name: "Auther",
@@ -27,27 +27,8 @@
                 password: '',
             };
         },
-        mounted() {
-                axios({
-                    .post("http://127.0.0.1:8000/auth/token/create/"),
-                    data: {
-                        username: this.username,
-                        password: this.password,
-                    },
-                    success: (responce) => {
-                            alert("Thanks!!!")
-                      },
-                    error: (responce) => {
-                        if (responce.status === 400) {
-                            alert ("login error!!!!")
-                        }
-                    }
-                });
 
-
-                    }
-
-            },
-        }
     }
+
+
 </script>
